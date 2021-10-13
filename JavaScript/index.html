@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>HTML Study</title>
+    <script>
+        var StyleController ={
+            setAnchorStyle:function (color){
+                var anchors = document.querySelectorAll('a');
+                var i = 0;
+                while(i < anchors.length){
+                    anchors[i].style.color = color;
+                    i += 1;
+                }
+            },
+            setBodyStyle:function (bgColor, color){
+                var target = document.querySelector('body');
+                target.style.backgroundColor = bgColor;
+                target.style.color = color;
+            },
+            bodyStyleHandler:function (self){
+                var target = document.querySelector('body');
+                if(self.value =='night'){
+                    this.setBodyStyle('black', 'yellow')
+                    this.setAnchorStyle('yellow')
+                    self.value = 'dawn';
+                }
+                else if(self.value =='dawn'){
+                    this.setBodyStyle('gray', 'lightblue')
+                    this.setAnchorStyle('lightblue')
+                    self.value = 'day';
+                }
+                else{
+                    this.setBodyStyle('white', 'black')
+                    this.setAnchorStyle('blue')
+                    self.value = 'night';
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>응애 나 애기 웹린이 공부중이야!</h1><br>
+    
+    <h1><a href="index.html">Web</a></h1>
+
+    <input type="button" value="night" onclick="StyleController.bodyStyleHandler(this)">
+
+    <ol>
+        <li><a href="../docs/HTML.html">HTML</a></li>
+        <li><a href="../docs/CSS.html">CSS</a></li>
+        <li><a href="../docs/JS.html">JavaScript</a></li>
+        <li><a href="../docs/PHP.html">PHP</a></li>
+    </ol>
+
+    <p>
+        모질라 재단의 프로토타입기반의 프로그래밍 언어로, 스크립트 언어에 해당된다.<br>
+        특수한 목적이 아닌 이상 모든 웹 브라우저에 인터프리터가 내장되어 있다.<br>
+        오늘날 HTML, CSS와 함께 웹을 구성하는 요소 중 하나다.<br>
+        HTML이 웹 페이지의 기본 구조를 담당하고, CSS가 디자인을 담당한다면<br>
+        JavaScript는 클라이언트 단에서 웹 페이지가 동작하는 것을 담당한다.<br>
+        웹 페이지를 자동차에 비유하자면, HTML은 자동차의 뼈대, CSS는 자동차의 외관,<br>
+        JavaScript는 자동차의 동력이라고 볼 수 있다.<br>
+        출처 : 나무위키
+    </p>
+</body>
+</html>
