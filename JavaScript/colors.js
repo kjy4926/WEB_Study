@@ -1,16 +1,10 @@
 var StyleController ={
     setAnchorStyle:function (color){
-        var anchors = document.querySelectorAll('a');
-        var i = 0;
-        while(i < anchors.length){
-            anchors[i].style.color = color;
-            i += 1;
-        }
+        $('a').css('color', color);
     },
     setBodyStyle:function (bgColor, color){
-        var target = document.querySelector('body');
-        target.style.backgroundColor = bgColor;
-        target.style.color = color;
+        $('body').css('backgroundColor', bgColor);
+        $('body').css('color', color);
     },
     bodyStyleHandler:function (self){
         var target = document.querySelector('body');
