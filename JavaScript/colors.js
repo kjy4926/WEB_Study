@@ -7,7 +7,6 @@ var StyleController ={
         $('body').css('color', color);
     },
     bodyStyleHandler:function (self){
-        var target = document.querySelector('body');
         if(self.value =='night'){
             this.setBodyStyle('black', 'white')
             this.setAnchorStyle('yellow')
